@@ -53,20 +53,20 @@ const Certifications = () => {
               {certifications.map((cert, index) => (
                 <div 
                   key={index}
-                  className={`bg-card p-8 rounded-lg shadow-card border-2 ${cert.borderColor} hover:shadow-elegant transition-all duration-300 group`}
+                  className={`bg-card p-8 rounded-lg shadow-card border-2 ${cert.borderColor} hover:shadow-elegant transition-all duration-300 group hover:-translate-y-2`}
                 >
                   <div className="grid lg:grid-cols-3 gap-8">
                     {/* Certificate Info */}
                     <div className="lg:col-span-2 space-y-6">
                       <div className="flex items-start gap-4">
-                        <div className={`p-4 rounded-lg ${cert.bgColor} ${cert.color} group-hover:scale-110 transition-transform duration-300`}>
+                        <div className={`p-4 rounded-lg ${cert.bgColor} ${cert.color} group-hover:scale-110 group-hover:rotate-3 transition-all duration-300`}>
                           <cert.icon className="h-8 w-8" />
                         </div>
                         <div className="flex-1">
                           <div className="flex items-start justify-between mb-2">
-                            <h4 className="text-xl font-bold">{cert.title}</h4>
+                            <h4 className="text-xl font-bold group-hover:text-accent transition-colors duration-300">{cert.title}</h4>
                             {cert.verified && (
-                              <span className="px-3 py-1 bg-success/10 text-success text-xs rounded-full">
+                              <span className="px-3 py-1 bg-success/10 text-success text-xs rounded-full group-hover:bg-success/20 transition-colors duration-300">
                                 Verified
                               </span>
                             )}
@@ -143,14 +143,14 @@ const Certifications = () => {
               {upcomingCertifications.map((cert, index) => (
                 <div 
                   key={index}
-                  className="bg-card p-6 rounded-lg shadow-card border border-dashed border-muted hover:border-accent transition-all duration-300"
+                  className="bg-card p-6 rounded-lg shadow-card border border-dashed border-muted hover:border-accent hover:shadow-elegant transition-all duration-300 group hover:-translate-y-1"
                 >
                   <div className="flex items-start gap-4">
-                    <div className="p-3 rounded-lg bg-muted">
-                      <cert.icon className="h-6 w-6 text-muted-foreground" />
+                    <div className="p-3 rounded-lg bg-muted group-hover:scale-110 group-hover:bg-accent/10 transition-all duration-300">
+                      <cert.icon className="h-6 w-6 text-muted-foreground group-hover:text-accent transition-colors duration-300" />
                     </div>
                     <div className="flex-1">
-                      <h4 className="font-semibold mb-1">{cert.title}</h4>
+                      <h4 className="font-semibold mb-1 group-hover:text-accent transition-colors duration-300">{cert.title}</h4>
                       <p className="text-sm text-muted-foreground mb-2">{cert.provider}</p>
                       <div className="flex items-center justify-between">
                         <span className="text-xs text-muted-foreground">{cert.expectedDate}</span>

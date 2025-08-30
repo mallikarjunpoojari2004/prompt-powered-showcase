@@ -41,17 +41,17 @@ const Skills = () => {
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="flex items-center gap-3 mb-6">
-                <div className={`p-3 rounded-lg bg-accent/10 ${category.color} group-hover:scale-110 transition-transform duration-300`}>
+                <div className={`p-3 rounded-lg bg-accent/10 ${category.color} group-hover:scale-110 group-hover:rotate-3 transition-all duration-300`}>
                   <category.icon className="h-6 w-6" />
                 </div>
-                <h3 className="font-semibold text-lg">{category.title}</h3>
+                <h3 className="font-semibold text-lg group-hover:text-accent transition-colors duration-300">{category.title}</h3>
               </div>
               
               <div className="space-y-3">
                 {category.skills.map((skill, skillIndex) => (
                   <div 
                     key={skill}
-                    className="skill-tag"
+                    className="skill-tag group-hover:bg-accent/30 group-hover:border-accent/40 group-hover:scale-105"
                     style={{ animationDelay: `${(index * 0.1) + (skillIndex * 0.05)}s` }}
                   >
                     {skill}
@@ -81,7 +81,7 @@ const Skills = () => {
                 key={skill.name}
                 className="group relative"
               >
-                <div className="skill-tag text-center cursor-pointer group-hover:bg-accent group-hover:text-white transition-all duration-300">
+                <div className="skill-tag text-center cursor-pointer group-hover:bg-accent group-hover:text-white group-hover:scale-110 transition-all duration-300 transform">
                   {skill.name}
                 </div>
                 

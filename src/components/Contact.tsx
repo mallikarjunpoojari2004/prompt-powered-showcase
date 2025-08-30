@@ -93,14 +93,14 @@ const Contact = () => {
                   href={contact.href}
                   target={contact.href.startsWith('http') ? '_blank' : undefined}
                   rel={contact.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                  className="flex items-center gap-4 p-4 bg-card rounded-lg shadow-card hover:shadow-elegant transition-all duration-300 group"
+                  className="flex items-center gap-4 p-4 bg-card rounded-lg shadow-card hover:shadow-elegant transition-all duration-300 group hover:-translate-y-1"
                 >
-                  <div className={`p-3 rounded-lg bg-muted group-hover:scale-110 transition-transform duration-300 ${contact.color}`}>
+                  <div className={`p-3 rounded-lg bg-muted group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 ${contact.color}`}>
                     <contact.icon className="h-6 w-6" />
                   </div>
                   <div>
-                    <h4 className="font-medium">{contact.label}</h4>
-                    <p className="text-sm text-muted-foreground">{contact.value}</p>
+                    <h4 className="font-medium group-hover:text-accent transition-colors duration-300">{contact.label}</h4>
+                    <p className="text-sm text-muted-foreground group-hover:text-muted-foreground/80 transition-colors duration-300">{contact.value}</p>
                   </div>
                 </a>
               ))}
