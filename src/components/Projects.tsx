@@ -46,7 +46,7 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div 
               key={project.title}
-              className={`project-card ${project.bgColor} ${project.borderColor} border-2`}
+              className={`project-card group ${project.bgColor} ${project.borderColor} border-2`}
             >
               <div className="grid lg:grid-cols-2 gap-8">
                 {/* Project Info */}

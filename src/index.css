@@ -175,7 +175,7 @@
   }
 
   .project-card {
-    @apply bg-card border border-border rounded-lg p-6 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group;
+    @apply bg-card border border-border rounded-lg p-6 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1;
     box-shadow: var(--shadow-card);
   }
 
